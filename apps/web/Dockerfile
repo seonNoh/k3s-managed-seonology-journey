@@ -8,7 +8,7 @@ RUN pnpm install --frozen-lockfile --filter @seonology/journey-web...
 COPY apps/web ./apps/web
 RUN pnpm --filter @seonology/journey-web build
 
-FROM nginxinc/nginx-unprivileged:1.27-alpine
+FROM nginxinc/nginx-unprivileged:1.31-alpine
 USER root
 COPY apps/web/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /workspace/apps/web/dist /usr/share/nginx/html
