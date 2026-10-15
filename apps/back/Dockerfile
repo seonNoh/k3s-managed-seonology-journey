@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.7
 # Build context: repo root (so we can include proto/gen replaced module).
-FROM golang:1.25-alpine AS builder
+FROM golang:1.26-alpine AS builder
 WORKDIR /src
 COPY apps/back/go.mod apps/back/go.sum ./apps/back/
 COPY proto/gen/go/go.mod proto/gen/go/go.sum ./proto/gen/go/
