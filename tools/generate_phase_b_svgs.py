@@ -47,19 +47,19 @@ TEXT = {
     "runtime-cutover": {
         "en": ("GitOps delivery", "Digest tracking → Git write-back → automated sync",
                ["Gitea Registry", "Image Updater", "seonology-k3s", "Argo CD",
-                "Read latest digest", "Write kustomization", "Read production overlay",
+                "Read latest digest", "Write kustomization", "Read overlay",
                 "Target: seonology-journey · web / API / back: 2 replicas each",
-                "workloads/seonology-journey/overlays/production"]),
+                "workloads/seonology-journey/overlays/production", "k3s namespace", "Apply Deployments"]),
         "ko": ("GitOps 배포", "digest 추적 → Git 기록 → 자동 동기화",
                ["Gitea Registry", "Image Updater", "seonology-k3s", "Argo CD",
-                "latest digest 조회", "kustomization 기록", "운영 오버레이 조회",
+                "latest digest 조회", "kustomization 기록", "오버레이 조회",
                 "대상: seonology-journey · web / API / back: 각각 복제본 2개",
-                "workloads/seonology-journey/overlays/production"]),
+                "workloads/seonology-journey/overlays/production", "k3s 네임스페이스", "Deployment 적용"]),
         "ja": ("GitOps デプロイ", "digest の追跡 → Git への書き戻し → 自動同期",
                ["Gitea Registry", "Image Updater", "seonology-k3s", "Argo CD",
-                "latest digest の取得", "kustomization の更新", "本番オーバーレイの取得",
+                "latest digest の取得", "kustomization の更新", "オーバーレイ取得",
                 "対象: seonology-journey · web / API / back: 各 2 レプリカ",
-                "workloads/seonology-journey/overlays/production"]),
+                "workloads/seonology-journey/overlays/production", "k3s 名前空間", "Deployment を適用"]),
     },
     "repository-roles": {
         "en": ("Repository map", "Directory ownership within one monorepo",
@@ -183,22 +183,30 @@ def render(topic: str, language: str) -> str:
         g.text(32,496,notes[language][0],13,color="faint")
         g.text(32,520,notes[language][1],13,color="faint")
     elif topic == "runtime-cutover":
-        for key,x,label in [("registry",32,t[0]),("updater",256,t[1]),("git",496,t[2]),("argo",736,t[3])]:
-            g.rect(key,x,112,192 if key!="registry" else 176,64,lead=key=="updater")
+        for key,x,label in [("registry",24,t[0]),("updater",208,t[1]),
+                            ("git",392,t[2]),("argo",576,t[3])]:
+            g.rect(key,x,104,176,88,lead=key=="updater")
             g.text(x+20,148,label,15,key,color="text")
-        for x in (120,352,592,832):
-            g.line(f"M{x},176 V464",True)
-        for key,x,y,h in [("reg-act",112,208,32),("upd-act",344,208,136),
-                           ("git-act",584,304,128),("argo-act",824,400,48)]:
+        g.rect("namespace",760,104,176,88)
+        g.text(776,136,t[9],15,"namespace",color="text")
+        g.text(776,168,"seonology-journey",13,"namespace",mono=True)
+        for x in (112,296,480,664,848):
+            g.line(f"M{x},192 V472",True)
+        for key,x,y,h in [("reg-act",104,224,32),("upd-act",288,224,112),
+                           ("git-act",472,296,104),("argo-act",656,368,104),
+                           ("namespace-act",840,440,32)]:
             g.rect(key,x,y,16,h,kind="block")
-        g.arrow("upd-act","reg-act",[(344,224),(128,224)])
-        g.arrow("upd-act","git-act",[(360,320),(584,320)],True)
-        g.arrow("argo-act","git-act",[(824,416),(600,416)])
-        g.text(144,200,t[4],13,color="dim")
-        g.text(376,296,t[5],13,color="dim")
-        g.text(616,392,t[6],13,color="dim")
-        g.text(32,488,t[7],13,color="body")
-        g.text(32,516,t[8],13,mono=True,color="faint")
+        messages = [
+            ("upd-act","reg-act",[(288,240),(120,240)],136,t[4],False),
+            ("upd-act","git-act",[(304,312),(472,312)],320,t[5],True),
+            ("argo-act","git-act",[(656,384),(488,384)],504,t[6],False),
+            ("argo-act","namespace-act",[(672,456),(840,456)],688,t[10],True),
+        ]
+        for src,dst,pts,label_x,label,flow in messages:
+            g.arrow(src,dst,pts,flow)
+            g.text(label_x,pts[0][1]-7,label,13,color="dim")
+        g.text(32,496,t[7],13,color="body")
+        g.text(32,520,t[8],13,mono=True,color="faint")
     elif topic == "repository-roles":
         g.rect("repo",32,104,896,344,kind="region",lead=True)
         g.text(56,136,"k3s-managed-seonology-journey/",15,"repo",mono=True,color="text")

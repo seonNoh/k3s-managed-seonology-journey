@@ -3,13 +3,13 @@
 The three README files use the same heading hierarchy, section order and diagram positions.
 
 1. Project title and language switcher
-2. Architecture: service topology, interfaces and implemented behavior
-3. Components: image delivery diagram and directory/output table
-4. Requirements: tool versions by local, CI and Docker context
-5. Quick start: web, local Go services and Compose scope
+2. Architecture: service topology, HTTP API methods/paths, authentication, arguments, minimal requests and external interfaces (H3)
+3. Components: image delivery diagram, concrete Android artifacts and linked implementation/workflow/release/check map (H3)
+4. Requirements: tool versions by local, CI and Docker context, including kubectl/Kustomize
+5. Quick start: web, local Go services, Compose scope and standalone manifest rendering
 6. Checks: repository and component checks
-7. Delivery: Gitea source, push mirror, workflow table, image tags and version rules
-8. Operations: GitOps sequence, central resources and runtime configuration (H3)
+7. Delivery: Gitea source, push mirror, workflow table, image tags, current-ref rebuild/republication and version rules
+8. Operations: GitOps sequence through namespace application, central resources, deployment checks and runtime configuration (H3)
 9. Repository policy: directory inclusion tree and contribution rules
 10. License
 

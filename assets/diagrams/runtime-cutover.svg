@@ -67,32 +67,40 @@
 <rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
 <text x="32" y="38" font-size="20" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="600" fill="var(--text)">GitOps delivery</text>
 <text x="32" y="64" font-size="13.5" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">Digest tracking → Git write-back → automated sync</text>
-<rect id="j60-runtime-cutover-en-registry" data-kind="card" x="32" y="112" width="176" height="64" rx="12" fill="url(#j60-runtime-cutover-en-s)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
-<path d="M44,113 H196" stroke="var(--hl)" fill="none"/>
-<text x="52" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-en-registry">Gitea Registry</text>
-<rect id="j60-runtime-cutover-en-updater" data-kind="card" x="256" y="112" width="192" height="64" rx="12" fill="url(#j60-runtime-cutover-en-sl)" stroke="var(--line-lead)" filter="url(#j60-runtime-cutover-en-shl)"/>
-<path d="M268,113 H436" stroke="var(--hl)" fill="none"/>
-<text x="276" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-en-updater">Image Updater</text>
-<rect id="j60-runtime-cutover-en-git" data-kind="card" x="496" y="112" width="192" height="64" rx="12" fill="url(#j60-runtime-cutover-en-s)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
-<path d="M508,113 H676" stroke="var(--hl)" fill="none"/>
-<text x="516" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-en-git">seonology-k3s</text>
-<rect id="j60-runtime-cutover-en-argo" data-kind="card" x="736" y="112" width="192" height="64" rx="12" fill="url(#j60-runtime-cutover-en-s)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
-<path d="M748,113 H916" stroke="var(--hl)" fill="none"/>
-<text x="756" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-en-argo">Argo CD</text>
-<path d="M120,176 V464" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
-<path d="M352,176 V464" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
-<path d="M592,176 V464" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
-<path d="M832,176 V464" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
-<rect id="j60-runtime-cutover-en-reg-act" data-kind="block" x="112" y="208" width="16" height="32" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
-<rect id="j60-runtime-cutover-en-upd-act" data-kind="block" x="344" y="208" width="16" height="136" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
-<rect id="j60-runtime-cutover-en-git-act" data-kind="block" x="584" y="304" width="16" height="128" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
-<rect id="j60-runtime-cutover-en-argo-act" data-kind="block" x="824" y="400" width="16" height="48" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
-<path data-from="j60-runtime-cutover-en-upd-act" data-to="j60-runtime-cutover-en-reg-act" data-pts="344,224;128,224" d="M344,224 L128,224" class="j60-runtime-cutover-en-quiet" marker-end="url(#j60-runtime-cutover-en-tq)"/>
-<path data-from="j60-runtime-cutover-en-upd-act" data-to="j60-runtime-cutover-en-git-act" data-pts="360,320;584,320" d="M360,320 L584,320" class="j60-runtime-cutover-en-flow" marker-end="url(#j60-runtime-cutover-en-t)"/>
-<path data-from="j60-runtime-cutover-en-argo-act" data-to="j60-runtime-cutover-en-git-act" data-pts="824,416;600,416" d="M824,416 L600,416" class="j60-runtime-cutover-en-quiet" marker-end="url(#j60-runtime-cutover-en-tq)"/>
-<text x="144" y="200" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">Read latest digest</text>
-<text x="376" y="296" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">Write kustomization</text>
-<text x="616" y="392" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">Read production overlay</text>
-<text x="32" y="488" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--body)">Target: seonology-journey · web / API / back: 2 replicas each</text>
-<text x="32" y="516" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="400" fill="var(--faint)">workloads/seonology-journey/overlays/production</text>
+<rect id="j60-runtime-cutover-en-registry" data-kind="card" x="24" y="104" width="176" height="88" rx="12" fill="url(#j60-runtime-cutover-en-s)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
+<path d="M36,105 H188" stroke="var(--hl)" fill="none"/>
+<text x="44" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-en-registry">Gitea Registry</text>
+<rect id="j60-runtime-cutover-en-updater" data-kind="card" x="208" y="104" width="176" height="88" rx="12" fill="url(#j60-runtime-cutover-en-sl)" stroke="var(--line-lead)" filter="url(#j60-runtime-cutover-en-shl)"/>
+<path d="M220,105 H372" stroke="var(--hl)" fill="none"/>
+<text x="228" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-en-updater">Image Updater</text>
+<rect id="j60-runtime-cutover-en-git" data-kind="card" x="392" y="104" width="176" height="88" rx="12" fill="url(#j60-runtime-cutover-en-s)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
+<path d="M404,105 H556" stroke="var(--hl)" fill="none"/>
+<text x="412" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-en-git">seonology-k3s</text>
+<rect id="j60-runtime-cutover-en-argo" data-kind="card" x="576" y="104" width="176" height="88" rx="12" fill="url(#j60-runtime-cutover-en-s)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
+<path d="M588,105 H740" stroke="var(--hl)" fill="none"/>
+<text x="596" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-en-argo">Argo CD</text>
+<rect id="j60-runtime-cutover-en-namespace" data-kind="card" x="760" y="104" width="176" height="88" rx="12" fill="url(#j60-runtime-cutover-en-s)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
+<path d="M772,105 H924" stroke="var(--hl)" fill="none"/>
+<text x="776" y="136" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-en-namespace">k3s namespace</text>
+<text x="776" y="168" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="400" fill="var(--body)" data-box="j60-runtime-cutover-en-namespace">seonology-journey</text>
+<path d="M112,192 V472" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
+<path d="M296,192 V472" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
+<path d="M480,192 V472" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
+<path d="M664,192 V472" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
+<path d="M848,192 V472" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
+<rect id="j60-runtime-cutover-en-reg-act" data-kind="block" x="104" y="224" width="16" height="32" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
+<rect id="j60-runtime-cutover-en-upd-act" data-kind="block" x="288" y="224" width="16" height="112" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
+<rect id="j60-runtime-cutover-en-git-act" data-kind="block" x="472" y="296" width="16" height="104" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
+<rect id="j60-runtime-cutover-en-argo-act" data-kind="block" x="656" y="368" width="16" height="104" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
+<rect id="j60-runtime-cutover-en-namespace-act" data-kind="block" x="840" y="440" width="16" height="32" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-en-sh)"/>
+<path data-from="j60-runtime-cutover-en-upd-act" data-to="j60-runtime-cutover-en-reg-act" data-pts="288,240;120,240" d="M288,240 L120,240" class="j60-runtime-cutover-en-quiet" marker-end="url(#j60-runtime-cutover-en-tq)"/>
+<text x="136" y="233" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">Read latest digest</text>
+<path data-from="j60-runtime-cutover-en-upd-act" data-to="j60-runtime-cutover-en-git-act" data-pts="304,312;472,312" d="M304,312 L472,312" class="j60-runtime-cutover-en-flow" marker-end="url(#j60-runtime-cutover-en-t)"/>
+<text x="320" y="305" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">Write kustomization</text>
+<path data-from="j60-runtime-cutover-en-argo-act" data-to="j60-runtime-cutover-en-git-act" data-pts="656,384;488,384" d="M656,384 L488,384" class="j60-runtime-cutover-en-quiet" marker-end="url(#j60-runtime-cutover-en-tq)"/>
+<text x="504" y="377" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">Read overlay</text>
+<path data-from="j60-runtime-cutover-en-argo-act" data-to="j60-runtime-cutover-en-namespace-act" data-pts="672,456;840,456" d="M672,456 L840,456" class="j60-runtime-cutover-en-flow" marker-end="url(#j60-runtime-cutover-en-t)"/>
+<text x="688" y="449" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">Apply Deployments</text>
+<text x="32" y="496" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--body)">Target: seonology-journey · web / API / back: 2 replicas each</text>
+<text x="32" y="520" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="400" fill="var(--faint)">workloads/seonology-journey/overlays/production</text>
 </svg>
