@@ -1,56 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="g65-repository-roles-ja-title g65-repository-roles-ja-desc">
-  <title id="g65-repository-roles-ja-title">リポジトリ役割</title>
-  <desc id="g65-repository-roles-ja-desc">Giteaを正本としGitHubをミラーにします</desc>
-  <style>
-    .title { fill:#f0f6fc; font:600 24px "Pretendard",system-ui,sans-serif; }
-    .subtitle { fill:#939da8; font:400 13px "Pretendard",system-ui,sans-serif; }
-    .card { fill:#f0f6fc; font:500 15px "Pretendard",system-ui,sans-serif; }
-    .body { fill:#c3ccd6; font:400 12px "Pretendard",system-ui,sans-serif; }
-    .value { fill:#7c9fff; font:500 11px ui-monospace,monospace; }
-    .foot { fill:#69717a; font:400 11px "Pretendard",system-ui,sans-serif; }
-    .flow { fill:none; stroke:#7c9fff; stroke-width:1.6; stroke-dasharray:5 6; animation:g65-repository-roles-ja-flow 2s linear infinite; }
-    @keyframes g65-repository-roles-ja-flow { to { stroke-dashoffset:-22; } }
-    @media (prefers-reduced-motion: reduce) { .flow { animation:none; } }
-  </style>
-  <defs>
-    <linearGradient id="g65-repository-roles-ja-surface" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1b222c"/><stop offset="1" stop-color="#151b23"/></linearGradient>
-    <linearGradient id="g65-repository-roles-ja-lead-surface" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#222b38"/><stop offset="1" stop-color="#19202a"/></linearGradient>
-    <filter id="g65-repository-roles-ja-shadow" x="-20%" y="-20%" width="150%" height="170%"><feDropShadow dx="-3" dy="10" stdDeviation="9" flood-color="#000000" flood-opacity=".50"/></filter>
-    <filter id="g65-repository-roles-ja-lead-shadow" x="-20%" y="-20%" width="150%" height="180%"><feDropShadow dx="-4" dy="13" stdDeviation="11" flood-color="#000000" flood-opacity=".58"/></filter>
-    <marker id="g65-repository-roles-ja-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7c9fff"/></marker>
-  </defs>
-  <rect width="960" height="540" fill="#0d1117"/>
-  <text x="48" y="56" class="title">リポジトリ役割</text>
-  <text x="48" y="82" class="subtitle">Giteaを正本としGitHubをミラーにします</text>
-  <g filter="url(#g65-repository-roles-ja-shadow)">
-    <rect x="56" y="144" width="256" height="224" rx="12" fill="url(#g65-repository-roles-ja-surface)" stroke="#252d38"/>
-    <path d="M68 145 H300" stroke="#ffffff" stroke-opacity="0.05"/>
-    <rect x="74" y="170" width="220" height="38" rx="8" fill="#1e2530"/>
-    <text x="184" y="194" class="card" text-anchor="middle">コントリビューター</text>
-    <text x="184" y="246" class="body" text-anchor="middle">通常のmain変更</text>
-    <rect x="98" y="286" width="172" height="30" rx="8" fill="#151b23" stroke="#252d38"/>
-    <text x="184" y="306" class="value" text-anchor="middle">source</text>
-  </g>
-  <g filter="url(#g65-repository-roles-ja-lead-shadow)">
-    <rect x="352" y="144" width="256" height="224" rx="12" fill="url(#g65-repository-roles-ja-lead-surface)" stroke="#33404f"/>
-    <path d="M364 145 H596" stroke="#7c9fff" stroke-opacity="0.40"/>
-    <rect x="370" y="170" width="220" height="38" rx="8" fill="#232c39"/>
-    <text x="480" y="194" class="card" text-anchor="middle">Gitea</text>
-    <text x="480" y="246" class="body" text-anchor="middle">信頼できる正本</text>
-    <rect x="394" y="286" width="172" height="30" rx="8" fill="#151b23" stroke="#252d38"/>
-    <text x="480" y="306" class="value" text-anchor="middle">verified</text>
-  </g>
-  <g filter="url(#g65-repository-roles-ja-shadow)">
-    <rect x="648" y="144" width="256" height="224" rx="12" fill="url(#g65-repository-roles-ja-surface)" stroke="#252d38"/>
-    <path d="M660 145 H892" stroke="#ffffff" stroke-opacity="0.05"/>
-    <rect x="666" y="170" width="220" height="38" rx="8" fill="#1e2530"/>
-    <text x="776" y="194" class="card" text-anchor="middle">GitHub</text>
-    <text x="776" y="246" class="body" text-anchor="middle">読取専用push mirror</text>
-    <rect x="690" y="286" width="172" height="30" rx="8" fill="#151b23" stroke="#252d38"/>
-    <text x="776" y="306" class="value" text-anchor="middle">ready</text>
-  </g>
-  <path class="flow" marker-end="url(#g65-repository-roles-ja-arrow)" d="M312 256 H340 Q344 256 344 260 V260"/>
-  <path class="flow" marker-end="url(#g65-repository-roles-ja-arrow)" d="M608 256 H636 Q640 256 640 260 V260"/>
-  <text x="48" y="474" class="foot">GTM-LIVE-65 · seonology journey · Gitea SSOT</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" lang="ja" role="img" aria-labelledby="j60-repository-roles-ja-title j60-repository-roles-ja-desc">
+<title id="j60-repository-roles-ja-title">リポジトリ構成</title>
+<desc id="j60-repository-roles-ja-desc">単一モノレポ内のディレクトリと役割</desc>
+<style>
+  svg{
+    --bg:#0d1117; --surface-a:#1b222c; --surface-b:#151b23;
+    --lead-a:#222b38; --lead-b:#19202a;
+    --inner:#1e2530; --inner-lead:#232c39;
+    --line:#252d38; --line-lead:#33404f;
+    --text:#f0f6fc; --body:#c3ccd6; --dim:#a2abb5; --faint:#8d959f;
+    --accent:#7c9fff; --accent-bg:rgba(124,159,255,.16);
+    --ok:#4ac97e; --warn:#e0a740; --bad:#f2705e; --off:#8b939d;
+    --quiet:#78818c;
+    --sh:#000; --sh-op:.50; --shl-op:.58; --shs-op:.40;
+    --glow-op:.40; --glow-cast:.45; --hl:rgba(255,255,255,.05);
+  }
+  @media (prefers-color-scheme: light){
+    svg{
+      --bg:#f6f8fa; --surface-a:#ffffff; --surface-b:#fafbfc;
+      --lead-a:#ffffff; --lead-b:#f5f8ff;
+      --inner:#eef1f4; --inner-lead:#e9f0fe;
+      --line:#d8dee4; --line-lead:#b8c9ee;
+      --text:#1f2328; --body:#3d444d; --dim:#59636e; --faint:#656d7a;
+      --accent:#2f62d4; --accent-bg:rgba(47,98,212,.10);
+      --ok:#187734; --warn:#8e5f00; --bad:#cf222e; --off:#5f6773;
+      --quiet:#6e7781;
+      --sh:#1f2328; --sh-op:.13; --shl-op:.18; --shs-op:.12;
+      --glow-op:.35; --glow-cast:.14; --hl:transparent;
+    }
+  }
+  .j60-repository-roles-ja-flow{fill:none;stroke:var(--accent);stroke-width:1.6;
+          stroke-linecap:round;stroke-linejoin:round;
+          stroke-dasharray:5 6;animation:j60-repository-roles-ja-move 2s linear infinite}
+  .j60-repository-roles-ja-quiet{fill:none;stroke:var(--quiet);stroke-width:1.4;
+           stroke-linecap:round;stroke-linejoin:round}
+  @keyframes j60-repository-roles-ja-move{to{stroke-dashoffset:-22}}
+  @media (prefers-reduced-motion:reduce){.j60-repository-roles-ja-flow{animation:none}}
+</style>
+<defs>
+  <filter id="j60-repository-roles-ja-sh" x="-30%" y="-30%" width="160%" height="170%">
+    <feDropShadow dx="-3" dy="10" stdDeviation="9" flood-color="var(--sh)" flood-opacity="var(--sh-op)"/>
+  </filter>
+  <filter id="j60-repository-roles-ja-shl" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="-4" dy="13" stdDeviation="11" flood-color="var(--sh)" flood-opacity="var(--shl-op)"/>
+  </filter>
+  <filter id="j60-repository-roles-ja-shs" x="-30%" y="-30%" width="160%" height="170%">
+    <feDropShadow dx="-2" dy="4" stdDeviation="4" flood-color="var(--sh)" flood-opacity="var(--shs-op)"/>
+  </filter>
+  <filter id="j60-repository-roles-ja-gl" x="-60%" y="-90%" width="220%" height="280%">
+    <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="var(--accent)" flood-opacity="var(--glow-op)"/>
+    <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="var(--sh)" flood-opacity="var(--glow-cast)"/>
+  </filter>
+  <linearGradient id="j60-repository-roles-ja-s" x1="0" y1="0" x2=".3" y2="1">
+    <stop offset="0" stop-color="var(--surface-a)"/><stop offset="1" stop-color="var(--surface-b)"/>
+  </linearGradient>
+  <linearGradient id="j60-repository-roles-ja-sl" x1="0" y1="0" x2=".3" y2="1">
+    <stop offset="0" stop-color="var(--lead-a)"/><stop offset="1" stop-color="var(--lead-b)"/>
+  </linearGradient>
+  <marker id="j60-repository-roles-ja-t" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/>
+  </marker>
+  <marker id="j60-repository-roles-ja-tq" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L8,4 L0,8 z" fill="var(--quiet)"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+<text x="32" y="38" font-size="20" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="600" fill="var(--text)">リポジトリ構成</text>
+<text x="32" y="64" font-size="13.5" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">単一モノレポ内のディレクトリと役割</text>
+<rect id="j60-repository-roles-ja-repo" data-kind="region" x="32" y="104" width="896" height="344" rx="12" fill="url(#j60-repository-roles-ja-sl)" stroke="var(--line-lead)" filter="url(#j60-repository-roles-ja-shl)"/>
+<text x="56" y="136" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="500" fill="var(--text)" data-box="j60-repository-roles-ja-repo">k3s-managed-seonology-journey/</text>
+<rect id="j60-repository-roles-ja-apps" data-kind="card" x="56" y="160" width="416" height="256" rx="12" fill="url(#j60-repository-roles-ja-s)" stroke="var(--line)" filter="url(#j60-repository-roles-ja-sh)"/>
+<path d="M68,161 H460" stroke="var(--hl)" fill="none"/>
+<text x="80" y="192" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="500" fill="var(--text)" data-box="j60-repository-roles-ja-apps">apps/</text>
+<path d="M88,227 H104" fill="none" stroke="var(--quiet)" stroke-width="1"/>
+<text x="112" y="232" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-apps">web/</text>
+<text x="224" y="232" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-apps">React クライアント</text>
+<path d="M88,275 H104" fill="none" stroke="var(--quiet)" stroke-width="1"/>
+<text x="112" y="280" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-apps">api/</text>
+<text x="224" y="280" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-apps">REST / WebSocket</text>
+<path d="M88,323 H104" fill="none" stroke="var(--quiet)" stroke-width="1"/>
+<text x="112" y="328" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-apps">back/</text>
+<text x="224" y="328" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-apps">gRPC / DynamoDB</text>
+<path d="M88,371 H104" fill="none" stroke="var(--quiet)" stroke-width="1"/>
+<text x="112" y="376" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-apps">android/</text>
+<text x="224" y="376" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-apps">Android クライアント</text>
+<path d="M88,216 V371" fill="none" stroke="var(--quiet)" stroke-width="1"/>
+<rect id="j60-repository-roles-ja-proto" data-kind="card" x="504" y="160" width="400" height="104" rx="12" fill="url(#j60-repository-roles-ja-s)" stroke="var(--line)" filter="url(#j60-repository-roles-ja-sh)"/>
+<path d="M516,161 H892" stroke="var(--hl)" fill="none"/>
+<text x="528" y="192" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="500" fill="var(--text)" data-box="j60-repository-roles-ja-proto">proto/</text>
+<text x="528" y="224" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-proto">共通の契約</text>
+<text x="528" y="240" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-proto">Protobuf → Go / TypeScript</text>
+<rect id="j60-repository-roles-ja-deploy" data-kind="card" x="504" y="288" width="400" height="128" rx="12" fill="url(#j60-repository-roles-ja-s)" stroke="var(--line)" filter="url(#j60-repository-roles-ja-sh)"/>
+<path d="M516,289 H892" stroke="var(--hl)" fill="none"/>
+<text x="528" y="320" font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="500" fill="var(--text)" data-box="j60-repository-roles-ja-deploy">deploy/</text>
+<text x="528" y="352" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-deploy">独立マニフェスト</text>
+<text x="528" y="384" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="400" fill="var(--body)" data-box="j60-repository-roles-ja-deploy">Kustomize</text>
+<text x="32" y="480" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--body)">クラスタのソース: seonology-k3s / workloads/seonology-journey</text>
+<text x="32" y="516" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--faint)">Gitea が基準リポジトリです。push mirror がブランチとタグを GitHub にコピーします。</text>
 </svg>

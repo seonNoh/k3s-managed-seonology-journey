@@ -1,56 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="g65-runtime-cutover-ko-title g65-runtime-cutover-ko-desc">
-  <title id="g65-runtime-cutover-ko-title">운영 전환</title>
-  <desc id="g65-runtime-cutover-ko-desc">상태 승인 전에 GitOps가 Gitea 이미지를 고정합니다</desc>
-  <style>
-    .title { fill:#f0f6fc; font:600 24px "Pretendard",system-ui,sans-serif; }
-    .subtitle { fill:#939da8; font:400 13px "Pretendard",system-ui,sans-serif; }
-    .card { fill:#f0f6fc; font:500 15px "Pretendard",system-ui,sans-serif; }
-    .body { fill:#c3ccd6; font:400 12px "Pretendard",system-ui,sans-serif; }
-    .value { fill:#7c9fff; font:500 11px ui-monospace,monospace; }
-    .foot { fill:#69717a; font:400 11px "Pretendard",system-ui,sans-serif; }
-    .flow { fill:none; stroke:#7c9fff; stroke-width:1.6; stroke-dasharray:5 6; animation:g65-runtime-cutover-ko-flow 2s linear infinite; }
-    @keyframes g65-runtime-cutover-ko-flow { to { stroke-dashoffset:-22; } }
-    @media (prefers-reduced-motion: reduce) { .flow { animation:none; } }
-  </style>
-  <defs>
-    <linearGradient id="g65-runtime-cutover-ko-surface" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#1b222c"/><stop offset="1" stop-color="#151b23"/></linearGradient>
-    <linearGradient id="g65-runtime-cutover-ko-lead-surface" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#222b38"/><stop offset="1" stop-color="#19202a"/></linearGradient>
-    <filter id="g65-runtime-cutover-ko-shadow" x="-20%" y="-20%" width="150%" height="170%"><feDropShadow dx="-3" dy="10" stdDeviation="9" flood-color="#000000" flood-opacity=".50"/></filter>
-    <filter id="g65-runtime-cutover-ko-lead-shadow" x="-20%" y="-20%" width="150%" height="180%"><feDropShadow dx="-4" dy="13" stdDeviation="11" flood-color="#000000" flood-opacity=".58"/></filter>
-    <marker id="g65-runtime-cutover-ko-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7c9fff"/></marker>
-  </defs>
-  <rect width="960" height="540" fill="#0d1117"/>
-  <text x="48" y="56" class="title">운영 전환</text>
-  <text x="48" y="82" class="subtitle">상태 승인 전에 GitOps가 Gitea 이미지를 고정합니다</text>
-  <g filter="url(#g65-runtime-cutover-ko-shadow)">
-    <rect x="56" y="144" width="256" height="224" rx="12" fill="url(#g65-runtime-cutover-ko-surface)" stroke="#252d38"/>
-    <path d="M68 145 H300" stroke="#ffffff" stroke-opacity="0.05"/>
-    <rect x="74" y="170" width="220" height="38" rx="8" fill="#1e2530"/>
-    <text x="184" y="194" class="card" text-anchor="middle">Gitea Registry</text>
-    <text x="184" y="246" class="body" text-anchor="middle">다중 아키텍처 이미지 3개</text>
-    <rect x="98" y="286" width="172" height="30" rx="8" fill="#151b23" stroke="#252d38"/>
-    <text x="184" y="306" class="value" text-anchor="middle">source</text>
-  </g>
-  <g filter="url(#g65-runtime-cutover-ko-lead-shadow)">
-    <rect x="352" y="144" width="256" height="224" rx="12" fill="url(#g65-runtime-cutover-ko-lead-surface)" stroke="#33404f"/>
-    <path d="M364 145 H596" stroke="#7c9fff" stroke-opacity="0.40"/>
-    <rect x="370" y="170" width="220" height="38" rx="8" fill="#232c39"/>
-    <text x="480" y="194" class="card" text-anchor="middle">Argo CD</text>
-    <text x="480" y="246" class="body" text-anchor="middle">Synced와 Healthy</text>
-    <rect x="394" y="286" width="172" height="30" rx="8" fill="#151b23" stroke="#252d38"/>
-    <text x="480" y="306" class="value" text-anchor="middle">verified</text>
-  </g>
-  <g filter="url(#g65-runtime-cutover-ko-shadow)">
-    <rect x="648" y="144" width="256" height="224" rx="12" fill="url(#g65-runtime-cutover-ko-surface)" stroke="#252d38"/>
-    <path d="M660 145 H892" stroke="#ffffff" stroke-opacity="0.05"/>
-    <rect x="666" y="170" width="220" height="38" rx="8" fill="#1e2530"/>
-    <text x="776" y="194" class="card" text-anchor="middle">k3s 런타임</text>
-    <text x="776" y="246" class="body" text-anchor="middle">Pod 6개 Ready</text>
-    <rect x="690" y="286" width="172" height="30" rx="8" fill="#151b23" stroke="#252d38"/>
-    <text x="776" y="306" class="value" text-anchor="middle">ready</text>
-  </g>
-  <path class="flow" marker-end="url(#g65-runtime-cutover-ko-arrow)" d="M312 256 H340 Q344 256 344 260 V260"/>
-  <path class="flow" marker-end="url(#g65-runtime-cutover-ko-arrow)" d="M608 256 H636 Q640 256 640 260 V260"/>
-  <text x="48" y="474" class="foot">GTM-LIVE-65 · seonology journey · Gitea SSOT</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" lang="ko" role="img" aria-labelledby="j60-runtime-cutover-ko-title j60-runtime-cutover-ko-desc">
+<title id="j60-runtime-cutover-ko-title">GitOps 배포</title>
+<desc id="j60-runtime-cutover-ko-desc">digest 추적 → Git 기록 → 자동 동기화</desc>
+<style>
+  svg{
+    --bg:#0d1117; --surface-a:#1b222c; --surface-b:#151b23;
+    --lead-a:#222b38; --lead-b:#19202a;
+    --inner:#1e2530; --inner-lead:#232c39;
+    --line:#252d38; --line-lead:#33404f;
+    --text:#f0f6fc; --body:#c3ccd6; --dim:#a2abb5; --faint:#8d959f;
+    --accent:#7c9fff; --accent-bg:rgba(124,159,255,.16);
+    --ok:#4ac97e; --warn:#e0a740; --bad:#f2705e; --off:#8b939d;
+    --quiet:#78818c;
+    --sh:#000; --sh-op:.50; --shl-op:.58; --shs-op:.40;
+    --glow-op:.40; --glow-cast:.45; --hl:rgba(255,255,255,.05);
+  }
+  @media (prefers-color-scheme: light){
+    svg{
+      --bg:#f6f8fa; --surface-a:#ffffff; --surface-b:#fafbfc;
+      --lead-a:#ffffff; --lead-b:#f5f8ff;
+      --inner:#eef1f4; --inner-lead:#e9f0fe;
+      --line:#d8dee4; --line-lead:#b8c9ee;
+      --text:#1f2328; --body:#3d444d; --dim:#59636e; --faint:#656d7a;
+      --accent:#2f62d4; --accent-bg:rgba(47,98,212,.10);
+      --ok:#187734; --warn:#8e5f00; --bad:#cf222e; --off:#5f6773;
+      --quiet:#6e7781;
+      --sh:#1f2328; --sh-op:.13; --shl-op:.18; --shs-op:.12;
+      --glow-op:.35; --glow-cast:.14; --hl:transparent;
+    }
+  }
+  .j60-runtime-cutover-ko-flow{fill:none;stroke:var(--accent);stroke-width:1.6;
+          stroke-linecap:round;stroke-linejoin:round;
+          stroke-dasharray:5 6;animation:j60-runtime-cutover-ko-move 2s linear infinite}
+  .j60-runtime-cutover-ko-quiet{fill:none;stroke:var(--quiet);stroke-width:1.4;
+           stroke-linecap:round;stroke-linejoin:round}
+  @keyframes j60-runtime-cutover-ko-move{to{stroke-dashoffset:-22}}
+  @media (prefers-reduced-motion:reduce){.j60-runtime-cutover-ko-flow{animation:none}}
+</style>
+<defs>
+  <filter id="j60-runtime-cutover-ko-sh" x="-30%" y="-30%" width="160%" height="170%">
+    <feDropShadow dx="-3" dy="10" stdDeviation="9" flood-color="var(--sh)" flood-opacity="var(--sh-op)"/>
+  </filter>
+  <filter id="j60-runtime-cutover-ko-shl" x="-30%" y="-30%" width="160%" height="180%">
+    <feDropShadow dx="-4" dy="13" stdDeviation="11" flood-color="var(--sh)" flood-opacity="var(--shl-op)"/>
+  </filter>
+  <filter id="j60-runtime-cutover-ko-shs" x="-30%" y="-30%" width="160%" height="170%">
+    <feDropShadow dx="-2" dy="4" stdDeviation="4" flood-color="var(--sh)" flood-opacity="var(--shs-op)"/>
+  </filter>
+  <filter id="j60-runtime-cutover-ko-gl" x="-60%" y="-90%" width="220%" height="280%">
+    <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="var(--accent)" flood-opacity="var(--glow-op)"/>
+    <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="var(--sh)" flood-opacity="var(--glow-cast)"/>
+  </filter>
+  <linearGradient id="j60-runtime-cutover-ko-s" x1="0" y1="0" x2=".3" y2="1">
+    <stop offset="0" stop-color="var(--surface-a)"/><stop offset="1" stop-color="var(--surface-b)"/>
+  </linearGradient>
+  <linearGradient id="j60-runtime-cutover-ko-sl" x1="0" y1="0" x2=".3" y2="1">
+    <stop offset="0" stop-color="var(--lead-a)"/><stop offset="1" stop-color="var(--lead-b)"/>
+  </linearGradient>
+  <marker id="j60-runtime-cutover-ko-t" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L8,4 L0,8 z" fill="var(--accent)"/>
+  </marker>
+  <marker id="j60-runtime-cutover-ko-tq" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L8,4 L0,8 z" fill="var(--quiet)"/>
+  </marker>
+</defs>
+<rect x="0" y="0" width="960" height="540" fill="var(--bg)"/>
+<text x="32" y="38" font-size="20" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="600" fill="var(--text)">GitOps 배포</text>
+<text x="32" y="64" font-size="13.5" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">digest 추적 → Git 기록 → 자동 동기화</text>
+<rect id="j60-runtime-cutover-ko-registry" data-kind="card" x="32" y="112" width="176" height="64" rx="12" fill="url(#j60-runtime-cutover-ko-s)" stroke="var(--line)" filter="url(#j60-runtime-cutover-ko-sh)"/>
+<path d="M44,113 H196" stroke="var(--hl)" fill="none"/>
+<text x="52" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-ko-registry">Gitea Registry</text>
+<rect id="j60-runtime-cutover-ko-updater" data-kind="card" x="256" y="112" width="192" height="64" rx="12" fill="url(#j60-runtime-cutover-ko-sl)" stroke="var(--line-lead)" filter="url(#j60-runtime-cutover-ko-shl)"/>
+<path d="M268,113 H436" stroke="var(--hl)" fill="none"/>
+<text x="276" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-ko-updater">Image Updater</text>
+<rect id="j60-runtime-cutover-ko-git" data-kind="card" x="496" y="112" width="192" height="64" rx="12" fill="url(#j60-runtime-cutover-ko-s)" stroke="var(--line)" filter="url(#j60-runtime-cutover-ko-sh)"/>
+<path d="M508,113 H676" stroke="var(--hl)" fill="none"/>
+<text x="516" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-ko-git">seonology-k3s</text>
+<rect id="j60-runtime-cutover-ko-argo" data-kind="card" x="736" y="112" width="192" height="64" rx="12" fill="url(#j60-runtime-cutover-ko-s)" stroke="var(--line)" filter="url(#j60-runtime-cutover-ko-sh)"/>
+<path d="M748,113 H916" stroke="var(--hl)" fill="none"/>
+<text x="756" y="148" font-size="15" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="500" fill="var(--text)" data-box="j60-runtime-cutover-ko-argo">Argo CD</text>
+<path d="M120,176 V464" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
+<path d="M352,176 V464" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
+<path d="M592,176 V464" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
+<path d="M832,176 V464" fill="none" stroke="var(--quiet)" stroke-width="1" stroke-dasharray="2 6"/>
+<rect id="j60-runtime-cutover-ko-reg-act" data-kind="block" x="112" y="208" width="16" height="32" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-ko-sh)"/>
+<rect id="j60-runtime-cutover-ko-upd-act" data-kind="block" x="344" y="208" width="16" height="136" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-ko-sh)"/>
+<rect id="j60-runtime-cutover-ko-git-act" data-kind="block" x="584" y="304" width="16" height="128" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-ko-sh)"/>
+<rect id="j60-runtime-cutover-ko-argo-act" data-kind="block" x="824" y="400" width="16" height="48" rx="8" fill="var(--inner)" stroke="var(--line)" filter="url(#j60-runtime-cutover-ko-sh)"/>
+<path data-from="j60-runtime-cutover-ko-upd-act" data-to="j60-runtime-cutover-ko-reg-act" data-pts="344,224;128,224" d="M344,224 L128,224" class="j60-runtime-cutover-ko-quiet" marker-end="url(#j60-runtime-cutover-ko-tq)"/>
+<path data-from="j60-runtime-cutover-ko-upd-act" data-to="j60-runtime-cutover-ko-git-act" data-pts="360,320;584,320" d="M360,320 L584,320" class="j60-runtime-cutover-ko-flow" marker-end="url(#j60-runtime-cutover-ko-t)"/>
+<path data-from="j60-runtime-cutover-ko-argo-act" data-to="j60-runtime-cutover-ko-git-act" data-pts="824,416;600,416" d="M824,416 L600,416" class="j60-runtime-cutover-ko-quiet" marker-end="url(#j60-runtime-cutover-ko-tq)"/>
+<text x="144" y="200" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">latest digest 조회</text>
+<text x="376" y="296" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">kustomization 기록</text>
+<text x="616" y="392" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--dim)">운영 오버레이 조회</text>
+<text x="32" y="488" font-size="13" font-family="Pretendard, system-ui, -apple-system, sans-serif" font-weight="400" fill="var(--body)">대상: seonology-journey · web / API / back: 각각 복제본 2개</text>
+<text x="32" y="516" font-size="13" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-weight="400" fill="var(--faint)">workloads/seonology-journey/overlays/production</text>
 </svg>
